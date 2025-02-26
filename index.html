@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App-listado-productos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <!-- Librerías para exportar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="titulo">
+            <h1>Anotador de Productos</h1>
+        </div>
+        <div class="botones">
+            <button class="pdf" onclick="exportPDF()">Exportar en PDF</button>
+            <button class="excel" onclick="exportExcel()">Exportar en Excel</button>
+            <button class="limpiar" onclick="Limpiar()">Limpiar Lista</button>
+        </div>
+
+        <div class="inputs">
+            <!--<h1>Anota un producto</h1>-->
+            <form id="productForm">
+                <div class="inputs-label">
+                    <label for="nombre">Producto: </label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
+                </div>
+                <div class="inputs-label">
+                    <label for="cantidad">Cantidad: </label>
+                    <input type="number" name="cantidad" id="cantidad">
+                </div>
+                <div class="inputs-label">
+                    <label for="marca">Marca: </label>
+                    <input type="text" name="marca" id="marca" placeholder="Nombre de la marca">
+                </div>
+                <div class="inputs-label">
+                    <label for="descripcion">Descripción: </label>
+                    <textarea name="descripcion" id="descripcion" placeholder="Escriba aqui..."></textarea>
+                </div>
+                <div class="boton-agregar">
+                    <button type="submit">Agregar producto</button>
+                </div>
+            </form>
+            
+        </div>
+        <hr>
+        <div class="tabla">
+            <div class="tabla-titulo">
+                <h1>Productos Agregados: </h1>
+            </div>
+            <div>
+                <table id="productTable">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Marca</th>
+                            <th>Descripcion</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 - Creado por Luiz Beto</p>
+        <a href="https://www.linkedin.com/in/orihuela-luis/">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/LuisOrihuela08">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://luisorihuela08.github.io/portfolio-orihuela/">
+            <i class="fa-solid fa-globe"></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>    
+</body>
+
+</html>

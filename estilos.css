@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{  
+    padding: 0;
+    margin: 0;   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    background-color:#1e2326;
+    padding: 15px;
+}
+hr{
+    width: 460px;
+}
+
+/*Titulo*/
+.container .titulo h1{
+    font-family:'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 2em;
+    color: #1CB698;
+
+}
+
+/*Botones*/
+.container .botones button{
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-family:'Inconsolata', monospace;
+    font-size: 1em;
+}
+.container .botones button:hover{
+    cursor: pointer;
+}
+.container .botones .pdf{
+    background-color: #B22222;
+}
+.container .botones .pdf:hover{
+    background-color: red;
+}
+.container .botones .excel{
+    background-color: #006400;
+}
+.container .botones .excel:hover{
+    background-color: green;
+}
+.container .botones .limpiar{
+    background-color: #007bff;
+}
+.container .botones .limpiar:hover{
+    background-color: blue;
+}
+
+/*Inputs*/
+.container .inputs{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.container .inputs form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.container .inputs form .inputs-label{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+} 
+.container .inputs label{
+    color: #1CB698;
+    font-family:'Inconsolata', monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.container .inputs input{
+    padding: 15px;
+    border-radius: 10px;
+    font-family:'Inconsolata', monospace;
+    font-size: 1em;
+    font-weight: bold;
+    width: 440px;   
+    background-color: white;
+}
+.container .inputs textarea{
+    padding: 15px;
+    width: 440px; 
+    height: 100px;
+    border-radius: 10px;
+    background-color: white;
+    font-family:'Inconsolata', monospace;
+    font-size: 1em;
+    font-weight: bold;
+}
+.container .inputs .boton-agregar button{
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-family:'Inconsolata', monospace;
+    font-size: 1em;
+    font-weight: bold;
+    background: #007bff;
+}
+.container .inputs .boton-agregar button:hover{
+    cursor: pointer;
+    background-color: blue;
+}
+/*Tabla*/
+.container .tabla{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width:470px;
+}
+.container .tabla .tabla-titulo h1{
+    color: #1CB698;
+    font-family:'Inconsolata', monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.container .tabla table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family:'Inconsolata', monospace;
+}
+.container .tabla th, td{
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.container .tabla th{
+    background: #007bff;
+    color: white;
+}
+.container .tabla td{
+    background-color: white;
+}
+.container .tabla button{
+    background-color: red;
+    color: white;
+    font-family:'Inconsolata', monospace;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: bold;
+}
+.container .tabla button:hover{
+    cursor: pointer;
+    background-color: #B22222;
+}
+/*Footer*/
+.footer{
+    background-color: #252a2e;
+    color: white;  
+    text-align: center;
+    padding: 15px;
+}
+.footer p{
+    font-family:'Inconsolata', monospace;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.footer i{
+    color: white;
+    font-size: 1.8em;
+    margin-right: 10px;
+}
