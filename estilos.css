@@ -2,7 +2,13 @@
 
 *{  
     padding: 0;
-    margin: 0;   
+    margin: 0;
+    /*background-color:#1e2326;  */ 
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color:#1e2326;
 }
 .container{
     display: flex;
@@ -12,6 +18,7 @@
     gap: 10px;
     background-color:#1e2326;
     padding: 15px;
+    width: 100%;
 }
 hr{
     width: 460px;
@@ -174,4 +181,66 @@ hr{
     color: white;
     font-size: 1.8em;
     margin-right: 10px;
+}
+/*Responsive*/
+@media screen and (max-width: 375px){
+    .body{
+        padding: 0;
+        margin: 0;     
+    }
+    .container{
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container .titulo h1{
+        font-size: 1.5em;     
+    }
+    .container .botones{
+        display: flex;
+        flex-direction: wrap;
+        gap: 15px;
+    }
+    .container .inputs{
+        width: 300px;
+    }
+    .container .inputs form{
+        display: flex;
+        flex-direction: column;
+        
+        gap: 10px;
+        margin-left: -18px;
+        width: 100%;
+    }
+    .container .inputs input{
+        width: 100%;
+    }
+    .container .inputs textarea{
+        width: 100%;
+    }
+    .container .inputs form .boton-agregar{
+        margin-left: 25px;
+    }
+    .container .inputs .boton-agregar button{
+        width: 100%;
+    }
+    .container .tabla{
+        width: 100%;
+    }
+    .container .tabla th, td{
+        padding: 10px;
+    }
+    .container .tabla button{
+        padding: 8px;
+    }
+    .footer{
+        margin-top: 15px;
+    }
+    .footer p{
+        font-size: 1.2em;
+    }
+    .footer i{
+        font-size: 1.5em;
+    }
 }
