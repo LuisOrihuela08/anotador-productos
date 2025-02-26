@@ -244,3 +244,68 @@ hr{
         font-size: 1.5em;
     }
 }
+@media screen and (max-width: 412px){
+    .body{
+        padding: 0;
+        margin: 0;     
+    }
+    .container{
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container .titulo h1{
+        font-size: 1.5em;     
+    }
+    .container .botones{
+        display: flex;
+        flex-direction: wrap;
+        gap: 5px;
+    }
+    .container .botones button{
+        width: 95px;
+        height: 100%;
+    }
+    .container .inputs{
+        width: 300px;
+    }
+    .container .inputs form{
+        display: flex;
+        flex-direction: column;
+        
+        gap: 10px;
+        margin-left: -18px;
+        width: 100%;
+    }
+    .container .inputs input{
+        width: 100%;
+    }
+    .container .inputs textarea{
+        width: 100%;
+    }
+    .container .inputs form .boton-agregar{
+        margin-left: 25px;
+    }
+    .container .inputs .boton-agregar button{
+        width: 100%;
+    }
+    .container .tabla{
+        width: 100%;
+    }
+    .container .tabla th, td{
+        padding: 10px;
+    }
+    .container .tabla button{
+        padding: 8px;
+    }
+    .footer{
+        margin-top: 15px;
+    }
+    .footer p{
+        font-size: 1.2em;
+    }
+    .footer i{
+        font-size: 1.5em;
+    }
+}
