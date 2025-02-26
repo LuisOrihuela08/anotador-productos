@@ -39,28 +39,78 @@ function deleteProduct(index) {
     updateTable();
 }
 // Función para exportar a Excel
+// Función para exportar a Excel
 function exportExcel() {
+    // Obtener la fecha actual y formatearla
+    const fechaActual = new Date();
+    const fechaFormateada = fechaActual.toLocaleDateString("es-PE", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+    }).replace(/\//g, "-"); // Reemplazar '/' por '-' para el nombre del archivo
+
+    // Crear hoja de cálculo y libro de trabajo
     const worksheet = XLSX.utils.json_to_sheet(products);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Pedidos");
-    XLSX.writeFile(workbook, "lista-productos.xlsx");
+
+    // Guardar el archivo con la fecha en el nombre
+    XLSX.writeFile(workbook, `lista-productos-${fechaFormateada}.xlsx`);
 }
+
 // Función para exportar a PDF
 function exportPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-    doc.text("Listado de Productos", 20, 20);
-    let y = 30;
-    products.forEach((product, index) => {
-        doc.text(
-            `${index + 1}. ${product.nombre} - ${product.marca} - Cant: ${product.cantidad} - Precio: ${product.descripcion}`,
-            20,
-            y
-        );
-        y += 10;
+
+    // Obtener la fecha actual y formatearla
+    const fechaActual = new Date();
+    const fechaFormateada = fechaActual.toLocaleDateString("es-PE", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
     });
-    doc.save("lista-productos.pdf");
+
+    // Título del documento
+    doc.text("Listado de Productos", 20, 20);
+    doc.text(`Fecha: ${fechaFormateada}`, 150, 20); // Coloca la fecha en la esquina superior derecha
+
+    // Verificar que haya productos
+    if (products.length === 0) {
+        alert("No hay productos para exportar.");
+        return;
+    }
+
+    // Obtener las cabeceras de las columnas
+    const headers = ["Nombre", "Cantidad", "Marca", "Descripcion"];
+
+    // Convertir los productos en un formato adecuado para autoTable
+    const data = products.map(product => [
+        product.nombre,
+        product.cantidad,
+        product.marca,
+        product.descripcion
+    ]);
+
+    // Generar la tabla con autoTable
+    doc.autoTable({
+        startY: 30,
+        head: [headers],
+        body: data,
+        styles: {
+            fontSize: 10
+        },
+        headStyles: {
+            fillColor: [0, 102, 204],
+            textColor: 255,
+            fontStyle: 'bold'
+        }
+    });
+
+    // Guardar el PDF
+    doc.save(`lista-productos-${fechaFormateada}.pdf`);
 }
+
 
 // Función para limpiar la lista
 function Limpiar() {

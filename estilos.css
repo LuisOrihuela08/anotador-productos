@@ -177,6 +177,9 @@ hr{
     font-size: 1.4em;
     font-weight: bold;
 }
+.footer a{
+    text-decoration: none;
+}
 .footer i{
     color: white;
     font-size: 1.8em;
