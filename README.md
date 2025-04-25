@@ -4,7 +4,7 @@ Desde la interfaz que provee se puede ir agregando cualquier tipo de productos y
 ## Vista de el navegador:
 [![navegador.png](https://i.postimg.cc/1tsKmVrs/navegador.png)](https://postimg.cc/GBgDz2f5)
 
-##Agregando Productoss:
+## Agregando Productoss:
 [![productos-agregados.png](https://i.postimg.cc/Gp8p4Xzj/productos-agregados.png)](https://postimg.cc/bGPPMH7G)
 
 ## Vista desde el celular
